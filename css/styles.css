@@ -12368,10 +12368,26 @@ header.masthead .bg-circle-4 {
 
 .banner-text {
   position: absolute;
-  margin-top: -13em;
-  left: 4em;
+  margin-top: -32em;
+  left: 5.5em;
   color: #fff;
+  padding: 10px;
+  
+
 }
+
+.banner-text h1 {
+  font-size: 40px;
+  /* background-color: rgba(211, 212, 213, 0.5); */
+  padding: 25px;
+  border-radius: 20px;
+  text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.4); 
+  font-weight: 700;
+  font-family: lato;
+  background-color: rgba(0, 0, 0, 0.4);
+  
+}
+
 
 .modal-backdrop {
   position: fixed;
@@ -12384,4 +12400,15 @@ header.masthead .bg-circle-4 {
   background-color: #e3b9cd;
   border-radius: 20px;
   border: #000 3px solid;
+}
+
+.btn-lg, .btn-light {
+  height: 75px;
+  width: 250px;
+  font-size: 36px;
+  margin-left: .75em;
+  text-decoration: none;
+  text-align: center;
+
+
 }
