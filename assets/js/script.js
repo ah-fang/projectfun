@@ -6,10 +6,9 @@
 var infoFormEl = document.querySelector("#info-form");
 var zipInputEl = document.querySelector("#zip");
 
-
 // all functions
 
-var response = fetch("https://api.openbrewerydb.org/breweries?by_city=los_angeles").then(function(response) {
+var response = fetch("https://api.openbrewerydb.org/breweries").then(function(response) {
     response.json().then(function(data){
         console.log(data);
     });
@@ -50,6 +49,28 @@ Logic sequence
 - fetch from brewery api (run both these functions in the bands-and-breweries modal)
 - dynamically return api response(s) and display on results webpage 
 
+example function:
+
+function buildUrl() {
+    if(cityChecked) {
+        if(response.ok) {
+            var cityName = (cityInput).value;
+        apiUrl += "?by_city=" + cityName;
+        }
+    }
+    if(zipChecked) {
+        if(response.ok) {
+            var zipCode = (zipInput).value;
+        apiUrl += "?by_postal=" + zipCode;
+        }
+    }
+    if(brewTypeChecked) {
+        if(response.ok) {
+            var brewType = (brewTypeInput).value;
+        apiUrl += "?by_type=" + brewType;
+        }
+    }    
+}
 
 3. Create event listeners for:
 - each submit button (bands, breweries, bands-and-breweries) to generate modal content
