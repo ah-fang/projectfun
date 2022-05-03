@@ -1,58 +1,58 @@
-//all variables
+// //all variables
 
-// var results = document.querySelector("results");
-// var title = document.querySelector("title");
-// var text = document.querySelector("text");
-var infoFormEl = document.querySelector("#info-form");
-var zipInputEl = document.querySelector("#zip");
+// // var results = document.querySelector("results");
+// // var title = document.querySelector("title");
+// // var text = document.querySelector("text");
+// var infoFormEl = document.querySelector("#info-form");
+// var zipInputEl = document.querySelector("#zip");
 
-// all functions
+// // all functions
 
-var response = fetch("https://api.openbrewerydb.org/breweries").then(function(response) {
-    response.json().then(function(data){
-        console.log(data);
-    });
-  });
+// var response = fetch("https://api.openbrewerydb.org/breweries").then(function(response) {
+//     response.json().then(function(data){
+//         console.log(data);
+//     });
+//   });
 
-console.log(response);
+// console.log(response);
 
-var formSubmitHandler = function(event) {
-    event.preventDefault();
-    console.log(event);
-  };
+// var formSubmitHandler = function(event) {
+//     event.preventDefault();
+//     console.log(event);
+//   };
 
-//all event listeners
+// //all event listeners
 
-  infoFormEl.addEventListener("submit", formSubmitHandler);
+//   infoFormEl.addEventListener("submit", formSubmitHandler);
 
-document.getElementById([buttonID1]).addEventListener('click', functionName);
-document.getElementById([buttonID2]).addEventListener('click', function2Name);
-document.getElementById([buttonID3]).addEventListener('click', function3Name);
+// document.getElementById([buttonID1]).addEventListener('click', functionName);
+// document.getElementById([buttonID2]).addEventListener('click', function2Name);
+// document.getElementById([buttonID3]).addEventListener('click', function3Name);
 
-function bandsForm(event) {
-  event.preventDefault();
-  currentForm = "getForm";
-  //get list of stuff
-  send("api/cheese", null, "GET");
-}
+// function bandsForm(event) {
+//   event.preventDefault();
+//   currentForm = "getForm";
+//   //get list of stuff
+//   send("api/cheese", null, "GET");
+// }
 
 
-function send(endpoint, data, method) {
-  let url= "https://api.openbrewerydb.org/breweries" + endpoint;
-  let h = new Headers();
-  if(data) {
-    h.append("Content-Type", "application/json")
-  }
-  let readable = new Request(url, {
-    method,
-    headers: h,
-    body: data,
-  });
-  fetch(req)
-  .then((res) => res.json())
-  .then(success)
-  .catch(fail);
-}
+// function send(endpoint, data, method) {
+//   let url= "https://api.openbrewerydb.org/breweries" + endpoint;
+//   let h = new Headers();
+//   if(data) {
+//     h.append("Content-Type", "application/json")
+//   }
+//   let readable = new Request(url, {
+//     method,
+//     headers: h,
+//     body: data,
+//   });
+//   fetch(req)
+//   .then((res) => res.json())
+//   .then(success)
+//   .catch(fail);
+// }
 /*
 Expected Behavior:
   1. A button is clicked which triggers a modal (handled already in Bootstrap, but needs filling with filters) 
@@ -101,3 +101,59 @@ function buildUrl() {
 - each submit button (bands, breweries, bands-and-breweries) to generate modal content
 - 
   */
+
+
+$('#searchcity').on('click',function(){
+  var city_name = $('#city-name').val()
+  var response = fetch("https://api.openbrewerydb.org/breweries/search?query="+city_name).then(function(response) {
+      response.json().then(function(data){
+          $('#result_data').show();
+          $('#exampleModal').modal('hide');
+          $('#sectionText').text('Brewery Result(s)');
+          console.log(data.length);
+          for(i=0; i<data.length; i++) {
+              if(data[i].website_url != null) {
+                  var resultData = '<strong>Name:</strong> ' + data[i].name + '<br/>' +
+                      '<strong>Street:</strong> ' + data[i].street + '<br>' +
+                      '<strong>City:</strong> ' + data[i].city + '<br>' +
+                      '<strong>State:</strong> ' + data[i].state + '<br>' +
+                      '<strong>Zip Code:</strong> ' + data[i].postal_code + '<br>' +
+                      '<strong>Phone:</strong> ' + data[i].phone + '<br>' +
+                      '<strong>Website:</strong> <a class="text-decoration-none" href="' + data[i].website_url + '">' + data[i].website_url + '</a>';
+              }
+              else{
+                  var resultData = '<strong>Name:</strong> ' + data[i].name + '<br/>' +
+                      '<strong>Street:</strong> ' + data[i].street + '<br>' +
+                      '<strong>City:</strong> ' + data[i].city + '<br>' +
+                      '<strong>State:</strong> ' + data[i].state + '<br>' +
+                      '<strong>Zip Code:</strong> ' + data[i].postal_code + '<br>' +
+                      '<strong>Phone:</strong> ' + data[i].phone;
+              }
+              $('#resultinfo').append('<hr>');
+              $('#resultinfo').append(resultData);
+          }
+          $('html, body').animate({
+              scrollTop: $("#result_data").offset().top
+          }, 500);
+      });
+  });
+});
+
+$('#searchcityband').on('click',function(){
+  $('#result_data').show();
+  $('#bandModal').modal('hide');
+  $('#sectionText').text('Band Result(s)');
+  $('html, body').animate({
+      scrollTop: $("#result_data").offset().top
+  }, 500);
+});
+
+$('#findBandBrewery').on('click',function(){
+  $('#result_data').show();
+  $('#result_data_band').show();
+  $('#sectionText').text('Brewery Result(s)');
+  $('#bandBreweryModal').modal('hide');
+  $('html, body').animate({
+      scrollTop: $("#result_data_band").offset().top
+  }, 500);
+});

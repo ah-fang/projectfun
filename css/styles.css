@@ -6345,24 +6345,6 @@ fieldset:disabled .btn {
  
 }
 
-.modal-backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1050;
-  width: 100vw;
-  height: 100vh;
-  background-color: #000
-}
-
-.modal-backdrop.fade {
-  opacity: 0;
-}
-
-.modal-backdrop.show {
-  opacity: 0.5;
-}
-
 .modal-header {
   display: flex;
   flex-shrink: 0;
@@ -6382,7 +6364,7 @@ fieldset:disabled .btn {
 .modal-title {
   margin-bottom: 0;
   line-height: 1.5;
-  color: #fff;
+  color: #ee0979;
 }
 
 .modal-body {
@@ -12388,20 +12370,6 @@ header.masthead .bg-circle-4 {
   
 }
 
-
-.modal-backdrop {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1050;
-  width: 75vw;
-  height: 75vh;
-  background-color: #e3b9cd;
-  border-radius: 20px;
-  border: #000 3px solid;
-}
-
 .btn-lg, .btn-light {
   height: 75px;
   width: 250px;
@@ -12409,6 +12377,11 @@ header.masthead .bg-circle-4 {
   margin-left: .75em;
   text-decoration: none;
   text-align: center;
+}
 
-
+#result_data, #result_data_band{
+  display: none;
+}
+#result_data{
+  margin-bottom: 2em;
 }
