@@ -21,13 +21,38 @@ var formSubmitHandler = function(event) {
     console.log(event);
   };
 
-
 //all event listeners
 
   infoFormEl.addEventListener("submit", formSubmitHandler);
 
+document.getElementById([buttonID1]).addEventListener('click', functionName);
+document.getElementById([buttonID2]).addEventListener('click', function2Name);
+document.getElementById([buttonID3]).addEventListener('click', function3Name);
+
+function bandsForm(event) {
+  event.preventDefault();
+  currentForm = "getForm";
+  //get list of stuff
+  send("api/cheese", null, "GET");
+}
 
 
+function send(endpoint, data, method) {
+  let url= "https://api.openbrewerydb.org/breweries" + endpoint;
+  let h = new Headers();
+  if(data) {
+    h.append("Content-Type", "application/json")
+  }
+  let readable = new Request(url, {
+    method,
+    headers: h,
+    body: data,
+  });
+  fetch(req)
+  .then((res) => res.json())
+  .then(success)
+  .catch(fail);
+}
 /*
 Expected Behavior:
   1. A button is clicked which triggers a modal (handled already in Bootstrap, but needs filling with filters) 
