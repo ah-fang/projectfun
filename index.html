@@ -31,7 +31,7 @@
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item"><a class="nav-link" href="#bands">Bands</a></li>
                 <li class="nav-item"><a class="nav-link" href="#breweries">Breweries</a></li>
-                <li class="nav-item"><a class="nav-link" href="#bands-breweries">Bands & Breweries</a></li>
+                <!-- <li class="nav-item"><a class="nav-link" href="#bands-breweries">Bands & Breweries</a></li> -->
             </ul>
         </div>
     </div>
@@ -47,7 +47,8 @@
         </div>
         <div class="banner-text">
             <h1>
-                Tired of staying home? <br> Get back to being social <br> with <i>Bands & Brewskis!</i>
+                Tired of staying home? Want to see your favorite artist live? <br> Find your next concert & grab a beer with your friends! <br> 
+                <!-- with <i>Bands & Brewskis!</i> -->
             </h1>
             <a href="#bands" type="button" class="btn-lg btn-light">Get Started!</a>
         </div>
@@ -64,10 +65,9 @@
             </div>
             <div class="col-lg-6 order-lg-1">
                 <div class="p-5">
-                    <h2 class="display-3">Find a Band</h2>
+                    <h2 class="display-3">Find Concerts</h2>
                     <button type="button" id="findBand" data-bs-toggle="modal" data-bs-target="#bandModal" class="btn mb-2 mb-md-0 py-3 px-4 btn-primary">Get Started
                     </button>
-
                 </div>
             </div>
         </div>
@@ -91,7 +91,7 @@
     </div>
 </section>
 <!-- Content section 3-->
-<section>
+<!-- <section>
     <div class="container px-5" id="bands-breweries">
         <div class="row gx-5 align-items-center">
             <div class="col-lg-6 order-lg-2">
@@ -106,20 +106,20 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <div class="container">
     <div class="row">
         <div class="col-lg-6">
             <div id="result_data" class="">
-                <h1 id="sectionText">Brewery Result(s)</h1>
+                <h1 id="sectionText">Your Result(s)</h1>
                 <span id="resultinfo"></span>
-                <span id="resultinfoband"></span>
+                <span id="resultinfobrew"></span>
             </div>
         </div>
         <div class="col-lg-6">
-            <div id="result_data_band" class="">
-                <h1>Band Result(s)</h1>
-                <span id="resultinfobandboth"></span>
+            <div id="resultinfo" class="">
+                <h1>Your Result(s)</h1>
+                <span id="resultinfoband"></span>
             </div>
         </div>
     </div>
@@ -137,13 +137,13 @@
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="bandModalLabel">Enter your city name</h5>
+                <h5 class="modal-title" id="bandModalLabel">Search Upcoming Shows</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <form>
                     <div class="mb-3">
-                        <label for="city-name" class="col-form-label">City</label>
+                        <label for="city-name" class="col-form-label">Artist Name</label>
                         <input type="text" class="form-control" id="city-name-band">
                     </div>
                     <a id="searchcityband" class="btn btn-primary">Search</a>
@@ -173,7 +173,7 @@
         </div>
     </div>
 </div>
-<div class="modal fade" id="bandBreweryModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- <div class="modal fade" id="bandBreweryModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
@@ -192,7 +192,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="./assets/js/script.js"></script>
