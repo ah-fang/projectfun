@@ -20,21 +20,14 @@ $('#searchcity').on('click',function(){
             var websiteData = '<strong>Website:</strong> <a class="text-decoration-none" href="' + data[i].website_url + '">' + data[i].website_url + '</a>';
 
             $('#resultinfo').append('<hr>');
-            var articlesResponse = withNullList.filter(item => {
-                var isValidObject = true;
-                if (!data[i].street || !data[i].phone || !data[i].website_url){
-                    isValidObject = false;
-                }
-                Response.send(articlesResponse);
-                return isValidObject; // if true, means we want this object, false means filter this object
-            })
-            var articlesResponse = articles.filter((item) => {
-                let isValidObject = true; // item is an article it has title img excerpt keys
-                for (let key in item) {
-                  if (!item[key]) isValidObject = false;
-                }
-                return isValidObject;
-              });
+
+            // var articlesResponse = data.filter((item) => {
+            //     let isValidObject = true;
+            //     for (let key in item) {
+            //       if (!item[key]) isValidObject = false;
+            //     }
+            //     return isValidObject;
+            //   });
 
             if(data[i].website_url != null && data[i].phone != null) {
                 $('#resultinfo').append(resultData, phoneData, websiteData);
