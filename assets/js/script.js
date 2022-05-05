@@ -21,14 +21,6 @@ $('#searchcity').on('click',function(){
 
             $('#resultinfo').append('<hr>');
 
-            // var articlesResponse = data.filter((item) => {
-            //     let isValidObject = true;
-            //     for (let key in item) {
-            //       if (!item[key]) isValidObject = false;
-            //     }
-            //     return isValidObject;
-            //   });
-
             if(data[i].website_url != null && data[i].phone != null) {
                 $('#resultinfo').append(resultData, phoneData, websiteData);
             }
