@@ -41,8 +41,9 @@ $('#searchcity').on('click',function(){
 });
 
 $('#searchcityband').on('click',function(){
-  var artist_name = $('#city-name-band').val()
-  var response = fetch("https://rest.bandsintown.com/artists/"+artist_name+"/events?app_id=c51ac5b40dd7423187d2cc5cf1537562&date=upcoming").then(function(response) {
+    location.replace("./results.html"); 
+    var artist_name = $('#city-name-band').val()
+    var response = fetch("https://rest.bandsintown.com/artists/"+artist_name+"/events?app_id=c51ac5b40dd7423187d2cc5cf1537562&date=upcoming").then(function(response) {
       response.json().then(function(data){
           $('#result_data').show();
           $('#bandModal').modal('hide');
@@ -69,11 +70,12 @@ $('#searchcityband').on('click',function(){
 });
 
 $('#findResults').on('click',function(){
+  location.replace("./results.html"); 
   $('#result_data').show();
   $('#result_data_band').show();
   $('#sectionText').text('Brewery Result(s)');
   $('#bandBreweryModal').modal('hide');
-  $('html, body').animate({
-      scrollTop: $("#result_data_band").offset().top
-  }, 500);
+//   $('html, body').animate({
+//       scrollTop: $("#result_data_band").offset().top
+//   }, 500);
 });
