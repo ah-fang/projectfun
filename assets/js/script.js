@@ -75,6 +75,7 @@ $('#findResults').on('click',function(){
   $('#result_data_band').show();
   $('#sectionText').text('Brewery Result(s)');
   $('#bandBreweryModal').modal('hide');
+  
 //   $('html, body').animate({
 //       scrollTop: $("#result_data_band").offset().top
 //   }, 500);
