@@ -5,7 +5,7 @@ var token = "c51ac5b40dd7423187d2cc5cf1537562";
 //brewery search function
 $('#searchcity').on('click',function(){
   var city_name = $('#city-name').val()
-
+  localStorage.setItem("searchcity", JSON.stringify(city_name));
   var response = fetch("https://api.openbrewerydb.org/breweries/search?query="+ city_name).then(function(response) {
       response.json().then(function(data){
           $('#result_data').show();
@@ -44,9 +44,9 @@ $('#searchcity').on('click',function(){
 });
 
 //artist search function
-$('#searchcityband').on('click',function(){
+$('#searchartistband').on('click',function(){
   var artist_name = $('#city-name-band').val()
-
+  localStorage.setItem("searchartistband", JSON.stringify(artist_name));
     var response = fetch("https://rest.bandsintown.com/artists/"+ artist_name + "/events?app_id=c51ac5b40dd7423187d2cc5cf1537562&date=upcoming")
     .then(function(response) {
         response.json().then(function(data){
@@ -65,7 +65,7 @@ $('#searchcityband').on('click',function(){
             }
 
             $('html, body').animate({
-                scrollTop: $("#result_data").offset().top
+                scrollTop: $("#scrollDown").offset().top
             }, 500);
         })
         .catch(function(error) {
@@ -75,6 +75,6 @@ $('#searchcityband').on('click',function(){
   });
 
   $('html, body').animate({
-      scrollTop: $("#result_data").offset().top
+      scrollTop: $("#scrollDown").offset().top
   }, 500);
 });

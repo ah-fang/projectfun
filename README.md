@@ -1,6 +1,5 @@
 # Projectfun
 
-
 ## Description 
 
 This site allows users to search for both upcoming concerts and local breweries to visit. Search by artist name or city name; results are displayed at the bottom of the homepage.<br>
