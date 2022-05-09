@@ -696,6 +696,7 @@ progress {
   padding-left: var(--bs-gutter-x, 0.75rem);
   margin-right: auto;
   margin-left: auto;
+  padding-bottom: 20px;
 }
 
 @media (min-width: 576px) {
@@ -703,6 +704,10 @@ progress {
   .container-sm,
   .container {
     max-width: 540px;
+  }
+
+  .btn-lg, .btn-light {
+    flex-shrink: 50%;
   }
 }
 
@@ -12357,7 +12362,6 @@ header.masthead .bg-circle-4 {
   color: #fff;
   padding: 10px;
   
-
 }
 
 .banner-text h1 {
@@ -12394,3 +12398,5 @@ header.masthead .bg-circle-4 {
 #bandText {
   display: none;
 }
+
+
