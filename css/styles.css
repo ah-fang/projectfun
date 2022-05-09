@@ -12398,5 +12398,177 @@ header.masthead .bg-circle-4 {
 #bandText {
   display: none;
 }
+.has-bg-img{
+  background-image: url(../assets/img/background1.png);
+  background-color: purple;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 50em;
+}
 
+/* Portrait and Landscape */
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 480px)
+and (-webkit-min-device-pixel-ratio: 2) {
+  .banner-text h1{
+    font-size: 12px;
+  }
+  .banner-text{
+    margin-top: -10.5em;
+    left: 0;
+    padding: 0;
+  }
+  .btn-lg, .btn-light{
+    height: auto;
+    width: auto;
+    font-size: 15px;
+    margin-left: 15px;
+  }
+  .navbar-custom{
+    padding-bottom:0;
+  }
+  .has-bg-img{
+    background-image: url(../assets/img/mobile-banner.png);
+    background-color: purple;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 18em;
+  }
+}
 
+/* Portrait and Landscape */
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 568px)
+and (-webkit-min-device-pixel-ratio: 2) {
+  .banner-text h1{
+    font-size: 12px;
+  }
+  .banner-text{
+    margin-top: -10.5em;
+    left: 0;
+    padding: 0;
+  }
+  .btn-lg, .btn-light{
+    height: auto;
+    width: auto;
+    font-size: 15px;
+    margin-left: 15px;
+  }
+  .navbar-custom{
+    padding-bottom:0;
+  }
+  .has-bg-img{
+    background-image: url(../assets/img/mobile-banner.png);
+    background-color: purple;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 18em;
+  }
+}
+
+/* Portrait and Landscape */
+@media only screen
+and (min-device-width: 375px)
+and (max-device-width: 667px)
+and (-webkit-min-device-pixel-ratio: 2) {
+  .banner-text h1{
+    font-size: 12px;
+  }
+  .banner-text{
+    margin-top: -10.5em;
+    left: 0;
+    padding: 0;
+  }
+  .btn-lg, .btn-light{
+    height: auto;
+    width: auto;
+    font-size: 15px;
+    margin-left: 15px;
+  }
+  .navbar-custom{
+    padding-bottom:0;
+  }
+  .has-bg-img{
+    background-image: url(../assets/img/mobile-banner.png);
+    background-color: purple;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 18em;
+  }
+}
+
+/* Portrait and Landscape */
+@media only screen
+and (min-device-width: 414px)
+and (max-device-width: 736px)
+and (-webkit-min-device-pixel-ratio: 3) {
+  .banner-text h1{
+    font-size: 12px;
+  }
+  .banner-text{
+    margin-top: -10.5em;
+    left: 0;
+    padding: 0;
+  }
+  .btn-lg, .btn-light{
+    height: auto;
+    width: auto;
+    font-size: 15px;
+    margin-left: 15px;
+  }
+  .navbar-custom{
+    padding-bottom:0;
+  }
+  .has-bg-img{
+    background-image: url(../assets/img/mobile-banner.png);
+    background-color: purple;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 18em;
+  }
+}
+
+/* Portrait and Landscape */
+@media only screen
+and (min-device-width: 375px)
+and (max-device-width: 812px)
+and (-webkit-min-device-pixel-ratio: 3) {
+  .banner-text h1{
+    font-size: 12px;
+  }
+  .banner-text{
+    margin-top: -10.5em;
+    left: 0;
+    padding: 0;
+  }
+  .btn-lg, .btn-light{
+    height: auto;
+    width: auto;
+    font-size: 15px;
+    margin-left: 15px;
+  }
+  .navbar-custom{
+    padding-bottom:0;
+  }
+  .has-bg-img{
+    background-image: url(../assets/img/mobile-banner.png);
+    background-color: purple;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 18em;
+  }
+}
